@@ -16,7 +16,7 @@ install:
   - wget https://github.com/bazelbuild/bazelisk/releases/download/v1.6.1/bazelisk-linux-${GOARCH} && chmod +x bazelisk-linux-${GOARCH} && mv bazelisk-linux-${GOARCH} $HOME/bin/bazel
 
 before_script:
-  - sudo echo "${IP} ${DOCKER_REGISTRY}" >> /etc/hosts
+  - echo "${IP} ${DOCKER_REGISTRY}" | sudo tee -a /etc/hosts > /dev/null
   - sudo mkdir -p /etc/docker/certs.d/${DOCKER_REGISTRY}
   - sudo cp ./certs/registry.crt /etc/docker/certs.d/${DOCKER_REGISTRY}/ 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin "$DOCKER_REGISTRY"
