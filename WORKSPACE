@@ -426,8 +426,8 @@ http_file(
 http_file(
     name = "busybox_ppc64le",
     executable = True,
-    sha256 = "3ee62c21cfda451c03cf43acf360f026989b74a16f54e953f7f780aba3c3ad85",
-    urls = ["http://ftp.us.debian.org/debian/pool/main/b/busybox/busybox-static_1.30.1-6+b1_ppc64el.deb"],
+    sha256 = "469297ea9293df0dcb6c3f8d344eaf9f9b6ec1732696ffe86994f87c3600423b",
+    urls = ["https://github.com/docker-library/busybox/raw/c0125333c4c3dfa4b9e5fd9fe6fbb875242f3613/stable/musl/busybox.tar.xz"],
 )
 
 # Docker rules.
